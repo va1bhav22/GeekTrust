@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import "./ProductListing.css";
 import Navbar from "../../Components/Navbar/Navbar";
-
 const ProductListing = () => {
   const [data, setdata] = useState([]);
   function dataFeatch() {
@@ -46,17 +45,26 @@ const ProductListing = () => {
       {/* main Work */}
 
       <div className="MainContainer">
-        <div className="SideBar"></div>
-        <div className="ProductContainer">
-          {
-            data.map(function(ele){
-              return<>
-              
-              
-              </>
-            })
-          }
+        <div className="SideBar">
           
+        </div>
+        <div className="ProductContainer">
+          {data.map(function (ele) {
+            return (
+              <>
+                <div className="CardContainer">
+                  <div className="CardImg">
+                    <img src={ele.imageURL} alt="" />
+                    <p className="Name">{ele.name}</p>
+                  </div>
+                  <div className="CardInfoContainer">
+                    <div className="Price">Rs {ele.price}</div>
+                    <div className="BTN">ADD TO CARD</div>
+                  </div>
+                </div>
+              </>
+            );
+          })}
         </div>
       </div>
     </div>

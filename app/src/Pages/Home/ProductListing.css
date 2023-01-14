@@ -37,6 +37,67 @@
 }
 
 .ProductContainer{
-    height: 500px;
-    border: 1px solid green;
+    height: max-content;
+    /* border: 1px solid green; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    row-gap: 20px;
+}
+
+.CardContainer{
+    /* border: 1px solid red; */
+    width: 230px;
+    height: 250px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 1px solid rgba(228, 225, 225,0.2);
+    padding: 4px;
+}
+
+.CardImg{
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    width: 180px;
+    height: 180px;
+    margin-top: 20px;
+   
+}
+
+.CardImg img {
+    width: 180px;
+    height: 180px;
+    margin-left: 40px;
+   
+    
+}
+
+.CardInfoContainer{
+    /* width: 80%; */
+    gap: 10px;
+    /* border: 1px solid gray; */
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.BTN{
+    background-color: black;
+    color: white;
+    padding: 4px;
+    font-size: 14px;
+    margin-left: 22px;
+}
+
+.Price{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.Name{
+    position: absolute;
+    font-weight: bold;
+    margin-top: -20px;
+    margin-left: -70px;
 }
